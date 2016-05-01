@@ -7,12 +7,53 @@
 //
 
 #import "ViewController.h"
+#import "AFNetworking.h"
 
 @interface ViewController ()
 
 @end
 
 @implementation ViewController
+
+@synthesize usernameText;
+@synthesize passwordText;
+
+- (IBAction)loginButton:(id)sender {
+    //获取输入的账号密码
+    NSString *username = usernameText.text;
+    NSString *password = passwordText.text;
+    //请求的参数
+    NSDictionary *parameters = @{@"username":username,
+                                   @"password":password
+                                   };
+    //请求的url
+    NSString *urlString = @"http://localhost:5000/";
+    //请求的managers
+//    AFHTTPSessionManager *managers = [AFHTTPSessionManager manager];
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    [manager POST:urlString parameters:parameters progress:nil success:^(NSURLSessionTask *task, id responseObject) {
+        NSLog(@"JSON: %@", responseObject);
+    } failure:^(NSURLSessionTask *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+    }];
+    
+    //请求的方式：POST
+    
+//    [managers POST:urlString parameters:parameters
+//          success:^(AFHTTPRequestOperation *operation, id responseObject) {
+//              NSLog(@"login success!!!");
+//              // 解析服务器返回来的json数据（AFNetworking默认解析json数据）
+////              if (responseObject != nil) {
+////                  NSDictionary *respObj = responseObject;
+////                  NSString *result = [respObj objectForKey:@"result"];
+////                  if (result && [result isEqualToString:@"ok"]) {
+////                      NSLog(@"the result :%@", result);
+////                  }
+////              }
+//          } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+//              NSLog(@"err:%@", error);
+//          }];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
