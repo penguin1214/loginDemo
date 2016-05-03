@@ -23,17 +23,18 @@
     NSString *username = usernameText.text;
     NSString *password = passwordText.text;
     //请求的参数
-    NSDictionary *parameters = @{@"username":username,
-                                   @"password":password
+    NSDictionary *parameters = @{@"username": @"1",
+                                   @"password":@"2"
                                    };
     //请求的url
-    NSString *urlString = @"http://localhost:5000/todo/api/v1.0/tasks";
+    NSString *urlString = @"http://localhost:5000/test";
     //请求的managers
 //    AFHTTPSessionManager *managers = [AFHTTPSessionManager manager];
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.responseSerializer = [AFJSONResponseSerializer serializer];     //用于接收json类型数据
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];   //用于发送json类型数据
 //    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];   //用于接收html请求
-    [manager GET:urlString parameters:nil progress:nil success:^(NSURLSessionTask *task, id responseObject) {
+    [manager POST:urlString parameters:parameters progress:nil success:^(NSURLSessionTask *task, id responseObject) {
         NSLog(@"JSON: %@", responseObject);
     } failure:^(NSURLSessionTask *operation, NSError *error) {
         NSLog(@"Error: %@", error);
