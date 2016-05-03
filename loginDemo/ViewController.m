@@ -27,11 +27,13 @@
                                    @"password":password
                                    };
     //请求的url
-    NSString *urlString = @"http://localhost:5000/";
+    NSString *urlString = @"http://localhost:5000/todo/api/v1.0/tasks";
     //请求的managers
 //    AFHTTPSessionManager *managers = [AFHTTPSessionManager manager];
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    [manager POST:urlString parameters:parameters progress:nil success:^(NSURLSessionTask *task, id responseObject) {
+    manager.responseSerializer = [AFJSONResponseSerializer serializer];     //用于接收json类型数据
+//    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];   //用于接收html请求
+    [manager GET:urlString parameters:nil progress:nil success:^(NSURLSessionTask *task, id responseObject) {
         NSLog(@"JSON: %@", responseObject);
     } failure:^(NSURLSessionTask *operation, NSError *error) {
         NSLog(@"Error: %@", error);
