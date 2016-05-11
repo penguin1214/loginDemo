@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F6EC64A1CE365240095EF62 /* BaseEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F6EC6491CE365240095EF62 /* BaseEntity.m */; };
 		2F7A36B61CDA510200E9D79E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F7A36B51CDA510200E9D79E /* Security.framework */; };
 		2FCEAC6A1CD37E9800976E55 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FCEAC691CD37E9800976E55 /* main.m */; };
 		2FCEAC6D1CD37E9800976E55 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FCEAC6C1CD37E9800976E55 /* AppDelegate.m */; };
@@ -29,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2F6EC6481CE365240095EF62 /* BaseEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseEntity.h; sourceTree = "<group>"; };
+		2F6EC6491CE365240095EF62 /* BaseEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseEntity.m; sourceTree = "<group>"; };
 		2F7A36B51CDA510200E9D79E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		2FCEAC641CD37E9800976E55 /* loginDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = loginDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FCEAC681CD37E9800976E55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -77,6 +80,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		2F6EC6471CE364E50095EF62 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				2F6EC6481CE365240095EF62 /* BaseEntity.h */,
+				2F6EC6491CE365240095EF62 /* BaseEntity.m */,
+			);
+			name = Entity;
+			sourceTree = "<group>";
+		};
 		2FCEAC5B1CD37E9800976E55 = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +112,7 @@
 		2FCEAC661CD37E9800976E55 /* loginDemo */ = {
 			isa = PBXGroup;
 			children = (
+				2F6EC6471CE364E50095EF62 /* Entity */,
 				2FCEAC6B1CD37E9800976E55 /* AppDelegate.h */,
 				2FCEAC6C1CD37E9800976E55 /* AppDelegate.m */,
 				2FCEAC6E1CD37E9800976E55 /* ViewController.h */,
@@ -301,6 +314,7 @@
 				2FCEAC701CD37E9800976E55 /* ViewController.m in Sources */,
 				2FCEAC6D1CD37E9800976E55 /* AppDelegate.m in Sources */,
 				2FCEAC6A1CD37E9800976E55 /* main.m in Sources */,
+				2F6EC64A1CE365240095EF62 /* BaseEntity.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

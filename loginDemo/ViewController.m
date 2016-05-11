@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "AFNetworking.h"
+#import "BaseEntity.h"
 
 @interface ViewController ()
 
@@ -23,10 +24,15 @@
     NSString *username = usernameText.text;
     NSString *password = passwordText.text;
     //请求的参数
-    NSDictionary *parameters = @{@"username": @"1",
-                                   @"password":@"2"
-                                   };
-    //请求的url
+//    NSDictionary *parameters = @{@"username": @"1",
+//                                   @"password":@"2"
+//                                   };
+    BaseEntity* entity = [[BaseEntity alloc] init];
+    entity.name = usernameText.text;
+    entity.id = passwordText.text;
+    
+    NSDictionary* parameters = [entity toJSONString];
+//    请求的url
     NSString *urlString = @"http://localhost:5000/test";
     //请求的managers
 //    AFHTTPSessionManager *managers = [AFHTTPSessionManager manager];
