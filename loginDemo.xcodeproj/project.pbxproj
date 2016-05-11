@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F7A36B61CDA510200E9D79E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F7A36B51CDA510200E9D79E /* Security.framework */; };
 		2FCEAC6A1CD37E9800976E55 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FCEAC691CD37E9800976E55 /* main.m */; };
 		2FCEAC6D1CD37E9800976E55 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FCEAC6C1CD37E9800976E55 /* AppDelegate.m */; };
 		2FCEAC701CD37E9800976E55 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FCEAC6F1CD37E9800976E55 /* ViewController.m */; };
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2F7A36B51CDA510200E9D79E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		2FCEAC641CD37E9800976E55 /* loginDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = loginDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FCEAC681CD37E9800976E55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2FCEAC691CD37E9800976E55 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -51,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F7A36B61CDA510200E9D79E /* Security.framework in Frameworks */,
 				902FAE5915F4DE9202E6532D /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,6 +141,7 @@
 		CA2D26ED5EDD354E37738D5C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2F7A36B51CDA510200E9D79E /* Security.framework */,
 				85E287E6DA2168F87299B006 /* libPods.a */,
 			);
 			name = Frameworks;
