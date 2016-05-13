@@ -16,6 +16,7 @@
 		2FCEAC751CD37E9800976E55 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FCEAC741CD37E9800976E55 /* Images.xcassets */; };
 		2FCEAC781CD37E9800976E55 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FCEAC761CD37E9800976E55 /* LaunchScreen.xib */; };
 		2FCEAC841CD37E9800976E55 /* loginDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FCEAC831CD37E9800976E55 /* loginDemoTests.m */; };
+		2FE10E421CE6022300281908 /* NSString+NSString_MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FE10E411CE6022300281908 /* NSString+NSString_MD5.m */; };
 		902FAE5915F4DE9202E6532D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 85E287E6DA2168F87299B006 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +47,8 @@
 		2FCEAC7D1CD37E9800976E55 /* loginDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = loginDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FCEAC821CD37E9800976E55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2FCEAC831CD37E9800976E55 /* loginDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = loginDemoTests.m; sourceTree = "<group>"; };
+		2FE10E401CE6022300281908 /* NSString+NSString_MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+NSString_MD5.h"; sourceTree = "<group>"; };
+		2FE10E411CE6022300281908 /* NSString+NSString_MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+NSString_MD5.m"; sourceTree = "<group>"; };
 		85E287E6DA2168F87299B006 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		93E281ED5165B960801898B5 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		992A02D9F418B4CDF650BCEF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -112,6 +115,7 @@
 		2FCEAC661CD37E9800976E55 /* loginDemo */ = {
 			isa = PBXGroup;
 			children = (
+				2FE10E3C1CE6012A00281908 /* Util */,
 				2F6EC6471CE364E50095EF62 /* Entity */,
 				2FCEAC6B1CD37E9800976E55 /* AppDelegate.h */,
 				2FCEAC6C1CD37E9800976E55 /* AppDelegate.m */,
@@ -149,6 +153,15 @@
 				2FCEAC821CD37E9800976E55 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2FE10E3C1CE6012A00281908 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				2FE10E401CE6022300281908 /* NSString+NSString_MD5.h */,
+				2FE10E411CE6022300281908 /* NSString+NSString_MD5.m */,
+			);
+			name = Util;
 			sourceTree = "<group>";
 		};
 		CA2D26ED5EDD354E37738D5C /* Frameworks */ = {
@@ -315,6 +328,7 @@
 				2FCEAC6D1CD37E9800976E55 /* AppDelegate.m in Sources */,
 				2FCEAC6A1CD37E9800976E55 /* main.m in Sources */,
 				2F6EC64A1CE365240095EF62 /* BaseEntity.m in Sources */,
+				2FE10E421CE6022300281908 /* NSString+NSString_MD5.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

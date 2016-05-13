@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "AFNetworking.h"
 #import "BaseEntity.h"
+#import "NSString+NSString_MD5.h"
 
 @interface ViewController ()
 
@@ -42,7 +43,7 @@
 //                                   };
     BaseEntity* entity = [[BaseEntity alloc] init];
     entity.name = username;
-    entity.id = [password integerValue];
+    entity.password = [password MD5String];
     entity.array = [NSArray arrayWithObjects:@"obj1", @"obj2", nil];
     
     NSDictionary* parameters = [entity toDictionary];
