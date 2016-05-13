@@ -18,7 +18,20 @@
 
 @synthesize usernameText;
 @synthesize passwordText;
+- (IBAction)getJSON:(id)sender {
+    NSString* url = @"http://localhost:5000/test";
+    AFHTTPSessionManager* manager = [AFHTTPSessionManager manager];
+    
+    manager.responseSerializer = [AFJSONResponseSerializer serializer];     //用于接收json类型数据
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    
+    [manager GET:url parameters:nil progress:nil success:^(NSURLSessionTask *task, id responseObject) {
+        NSLog(@"JSON: %@", responseObject);
+    } failure:^(NSURLSessionTask *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+    }];
 
+}
 - (IBAction)loginButton:(id)sender {
     //获取输入的账号密码
     NSString *username = usernameText.text;
@@ -30,6 +43,7 @@
     BaseEntity* entity = [[BaseEntity alloc] init];
     entity.name = username;
     entity.id = [password integerValue];
+    entity.array = [NSArray arrayWithObjects:@"obj1", @"obj2", nil];
     
     NSDictionary* parameters = [entity toDictionary];
 //    请求的url

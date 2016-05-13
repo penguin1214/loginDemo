@@ -12,5 +12,6 @@
 
 @property (assign, nonatomic) NSInteger id;
 @property (strong, nonatomic) NSString* name;
+@property (nonatomic, copy) NSArray* array;
 
 @end
