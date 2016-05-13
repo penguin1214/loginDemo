@@ -28,10 +28,10 @@
 //                                   @"password":@"2"
 //                                   };
     BaseEntity* entity = [[BaseEntity alloc] init];
-    entity.name = usernameText.text;
-    entity.id = passwordText.text;
+    entity.name = username;
+    entity.id = [password integerValue];
     
-    NSDictionary* parameters = [entity toJSONString];
+    NSDictionary* parameters = [entity toDictionary];
 //    请求的url
     NSString *urlString = @"http://localhost:5000/test";
     //请求的managers

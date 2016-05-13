@@ -10,7 +10,7 @@
 
 @interface BaseEntity : JSONModel
 
-@property (assign, nonatomic) int id;
+@property (assign, nonatomic) NSInteger id;
 @property (strong, nonatomic) NSString* name;
 
 @end
